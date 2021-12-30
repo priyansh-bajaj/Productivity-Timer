@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+   <head>
+      <link rel="stylesheet" href="style.css">
+      <meta charset="UTF-8">
+      <meta name="description" content="Productivity Timer using Bolt IoT">
+      <meta name="author" content="Priyansh Bajaj">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Productivity Timer</title>
+      <h1 class="header">Productivity Timer</h1>
+   </head>
+
+   <body>
+      <p id="time" style="font-size:3vh;">Timer: Ready</p>
+      <input type="number" class="timer form-control" min="0" id="productivity_timer_seconds" placeholder="in seconds" value="">
+      <div class="checkboxes__item">
+         <p> End Timer Actions </p>
+         <label class="checkbox checkbox-style">
+            <input class="checkbox__parameter" type="checkbox" checked="checked">
+            <div class="checkbox__checkmark"></div>
+            <div class="checkbox__body">Turn On String Lights</div>
+         </label>
+         <br/>
+         <label class="checkbox checkbox-style">
+            <input class="checkbox__parameter" type="checkbox" checked="checked">
+            <div class="checkbox__checkmark"></div>
+            <div class="checkbox__body">Show Bolt Animation on Matrix</div>
+         </label>
+         <br/>
+         <label class="checkbox checkbox-style">
+            <input class="checkbox__parameter" type="checkbox" checked="checked">
+            <div class="checkbox__checkmark"></div>
+            <div class="checkbox__body">Send Remote Alert on Telegram</div>
+         </label>
+         <br/>
+         <label class="checkbox checkbox-style">
+            <input class="checkbox__parameter" type="checkbox" checked="checked">
+            <div class="checkbox__checkmark"></div>
+            <div class="checkbox__body">Run Custom JavaScript on WebPage</div>
+         </label>
+      </div>
+      <textarea class="jsCode" id="jsString" name="jsString"></textarea>
+      <br/>
+      <div class="progress">
+         <button class="startButton" onclick="startTimer()">Start</button>
+         <button class="stopButton" onclick="stopTimer()">Stop</button>
+      </div>
+	  <script src="https://cloud.boltiot.com/static/js/boltCommands.js"></script>
+      <script src="script.js"></script>
+   </body>
+
+</html>
