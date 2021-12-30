@@ -1,8 +1,8 @@
-// bolt information
+// bolt api key and device name
 var api_key = "";
 var d_name = "";
 
-// telegram information
+// telegram api key and channel name
 var botKey = "";
 var c_name = "";
 
